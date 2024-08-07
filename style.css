@@ -743,6 +743,7 @@ img.tab_col_image {
 @media screen and (max-width: 768px) {
     html {
         font-size: calc(100vw / 768 * 10);
+        overflow-x: hidden;
     }
 
     span {
