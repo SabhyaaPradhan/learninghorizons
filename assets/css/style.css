@@ -4,6 +4,8 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 :root {
@@ -20,7 +22,7 @@
 
 @font-face {
     font-family: "Primary";
-    src: url(./fonts/PPMori-Regular.otf);
+    src: url(/fonts/PPMori-Regular.otf);
 }
 
 ::-webkit-scrollbar {
@@ -35,6 +37,8 @@ body {
     font-family: "Primary";
     background-color: var(--primary);
     color: var(--secondary);
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h1 {
@@ -62,6 +66,7 @@ span {
 
 .app {
     position: relative;
+    padding: 0 1rem;
 }
 
 .grid {
@@ -74,21 +79,20 @@ span {
 /* Nav */
 
 .nav {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 40;
+    z-index: 990;
     padding: 10px 30px;
+    backdrop-filter: blur(2px);
 }
 
 .nav_wrapper {
     grid-template-areas: 'a a b b b b . . . c d d';
     padding: 1rem;
-    background-color: #ffffff80;
     padding-bottom: 0;
     border-radius: 50px;
-    border: 3px solid black;
 }
 
 .nav_logo {
@@ -113,7 +117,7 @@ span {
     display: block;
     width: 6.4rem;
     height: 0.2rem;
-    background-color: var(--secondary);
+    background-color: #525252;
     margin: 1rem 0;
     cursor: pointer;
 }
@@ -129,13 +133,33 @@ span {
     color: #000;
 }
 
+.menu-open h4:after,
+.menu-close h4:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    background: #000000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.menu-open h4:hover:after,
+.menu-close h4:hover:after { 
+    width: 40%; 
+    left: 70px; 
+}
+
 .menu-open,
 .menu-close {
     position: absolute;
     top: 0;
     right: 0;
     padding: 4.5rem 10rem;
-    font-size: 45px;
+    padding-bottom: 0.5rem;
+    font-size: 30px;
     cursor: pointer;
 }
 
@@ -302,6 +326,7 @@ span {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    mix-blend-mode: soft-light;
 }
 
 .section_col:nth-child(2) {
@@ -718,6 +743,8 @@ img.tab_col_image {
 }
 
 .footer_title h1 {
+    margin-top: 15rem;
+    margin-bottom: 15rem;
     font-size: 30rem;
     text-transform: uppercase;
     margin-bottom: 0;
@@ -767,7 +794,15 @@ img.tab_col_image {
 
     .menu-open,
     .menu-close {
-        padding: 7.5rem 10rem;
+        font-size: 20px;
+        padding: 7.5rem 6rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .menu-open h4:hover:after,
+    .menu-close h4:hover:after { 
+        width: 50%; 
+        left: 32px; 
     }
 
     .section {
@@ -915,6 +950,14 @@ img.tab_col_image {
 
     .w-single{
         display: block;
+    }
+
+    .w-single:nth-child(2) .w-single_tab,
+    .w-single:nth-child(3) .w-single_tab,
+    .w-single:nth-child(4) .w-single_tab,
+    .w-single:nth-child(5) .w-single_tab
+    {
+        top: 17rem;
     }
 
     .w-single_tab{
