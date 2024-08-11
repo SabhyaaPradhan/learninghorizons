@@ -291,7 +291,7 @@ span {
 
 .section_title {
     position: absolute;
-    top: 16rem;
+    top: 21rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 20;
