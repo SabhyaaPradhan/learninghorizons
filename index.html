@@ -18,75 +18,62 @@
 </head>
 
 <body>
+    
     <main class="app">
         <!-- Nav -->
+
         <div class="nav">
-            <div class="nav_wrapper grid">
-                <div class="nav_logo">
-                    <a href="#" class="logo"><img src="./assets/img/Learning.png" alt="" style="width: 150px;"></a>
+            <div class="nav_logo">
+                <a href="#" class="logo"><img src="./assets/img/Learning.png" alt="" style="width: 150px;"></a>
+            </div>
+            <div class="nav_menu">
+                <div class="nav_menu_button --open-menu">
+                    <div class="nav_menu_button_text">
+                        <span>Menu</span>
+                    </div>
+                    <div class="nav_menu_button_circle"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu -->
+
+        <div class="menu">
+            <div class="menu_wrapper">
+                <div class="menu_row">
+                    <div class="menu_row_pages">
+                        <h2><a href="index.html">Home</a></h2>
+                        <h2><a href="about.html">About</a></h2>
+                        <h2>Services</h2>
+                        <h2>About</h2>
+                    </div>
+
+                    <div class="menu_row_info">
+                        <div class="menu_row_info_location">
+                            <span>Akira</span>
+                            <span>Akira</span>
+                            <span>Akira</span>
+                            <span>Akira</span>
+                        </div>
+                        <div class="menu_row_info_social">
+                            <span>Instagram</span>
+                            <span>Instagram</span>
+                            <span>Instagram</span>
+                            <span>Instagram</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div style="display: flex;justify-content: center;text-align: center; padding: 23px 20px;">
-                    <div class="menu-open">
-                        <h4 class="menu-button">Menu</h4>
+                <div class="menu_row">
+                    <div class="menu_row_media">
+                        <video autoplay loop muted src="./assets/img/video.mp4"></video>
                     </div>
-                </div>
-                <div class="nav-container">
-                    <div class="menu-close">
-                        <h4 class="menu-button">Close</h4>
-                    </div>
-                    <div class="socials">
-                        <span>facebook</span>
-                        <span>instagram</span>
-                        <span>twitter</span>
-                    </div>
-                    <div class="menu">
-                        <div class="menu__item">
-                            <a href="index.html" class="menu__item-link">Home</a>
-                            <img src="https://images.unsplash.com/photo-1650756697432-98d1a1448cab?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="" class="menu__item-img">
-                            <div class="nav-marquee">
-                                <div class="nav-marquee__inner">
-                                    <span>Home - Home - Home - Home - Home - Home - Home</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu__item">
-                            <a href="about.html" class="menu__item-link">About</a>
-                            <img src="https://images.unsplash.com/photo-1637416067365-2b5e7e8fe8fa?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="" class="menu__item-img">
-                            <div class="nav-marquee">
-                                <div class="nav-marquee__inner">
-                                    <span>About - About - About - About - About - About - About</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu__item">
-                            <a href="book.html" class="menu__item-link">Services</a>
-                            <img src="https://images.unsplash.com/photo-1648275492532-0065e0e8ed93?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="" class="menu__item-img">
-                            <div class="nav-marquee">
-                                <div class="nav-marquee__inner">
-                                    <span>Services - Services - Services - Services - Services - Services -
-                                        Services</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="menu__item">
-                            <a href="contact.html" class="menu__item-link">Contact</a>
-                            <img src="https://images.unsplash.com/photo-1650081221669-fccab00c76a0?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                alt="" class="menu__item-img">
-                            <div class="nav-marquee">
-                                <div class="nav-marquee__inner">
-                                    <span>Contact - Contact - Contact - Contact - Contact - Contact -
-                                        Contact</span>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="menu_row_title">
+                        <h1>A</h1>
+                        <h1>K</h1>
+                        <h1>I</h1>
+                        <h1>R</h1>
+                        <h1>A</h1>
                     </div>
                 </div>
             </div>
@@ -403,34 +390,163 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     
+    <script>
+
+        paceOptions = {
+        ajax: true,
+        document: true,
+        eventLag: false
+        };
+
+        Pace.on('done', function() {
+        $('.p').delay(500).animate({top: '30%', opacity: '0'}, 3000, $.bez([0.19,1,0.22,1]));
+
+
+        $('#preloader').delay(1500).animate({top: '-100%'}, 2000, $.bez([0.19,1,0.22,1]));
+
+        TweenMax.from(".title", 2, {
+             delay: 1.8,
+                  y: 10,
+                  opacity: 0,
+                  ease: Expo.easeInOut
+            })
+       });
+
+      </script>
 
     <script>
-        var t1 = new TimelineMax({ paused: true });
+        const menu = {
+            element: document.querySelector('.menu'),
+            pages: document.querySelectorAll('.menu_row_pages > h2'),
+            info: document.querySelectorAll('.menu_row_info > div > span'),
+            title: document.querySelectorAll('.menu_row_title > h1'),
+            media: document.querySelector('.menu_row_media'),
+        }
 
-        t1.to(".nav-container", 1, {
-            left: 0,
-            ease: Expo.easeInOut
-        });
+        const button = {
+            element: document.querySelector('.nav_menu_button'),
+            text: document.querySelectorAll('.nav_menu_button_text > span'),
+            open: document.querySelector('.--open-menu'),
+            close: document.querySelector('.--close-menu'),
+        }
 
-        t1.staggerFrom(".menu > div", 0.8, {
-            y: 100,
-            opacity: 0,
-            ease: Expo.easeInOut
-        }, 0.1, "-=0.4");
+        const clipPath = {
+            init: 'inset(0% 0% 0% 0%)',
+            bottom: 'inset(100% 0% 0% 0%)',
+            top: 'inset(0% 0% 100% 0%)',
+        }
 
-        t1.staggerFrom(".socials", 0.8, {
-            y: 100,
-            opacity: 0,
-            ease: Expo.easeInOut
-        }, 0.4, "-=0.6");
+        const tlMenu = gsap.timeline({
+            paused: true,
+            defaults: { duration: 1.6, ease: 'expo.inOut' },
+        })
 
-        t1.reverse();
-        $(document).on("click", ".menu-open", function () {
-            t1.reversed(!t1.reversed());
-        });
-        $(document).on("click", ".menu-close", function () {
-            t1.reversed(!t1.reversed());
-        });
+        let isEnabled = false
+
+        const initMenu = () => {
+            gsap.set(menu.element, { pointerEvents: 'none', clipPath: clipPath.bottom })
+            gsap.set(menu.pages, { yPercent: 100, autoAlpha: 0 })
+            gsap.set(menu.info, { yPercent: 100, autoAlpha: 0 })
+            gsap.set(menu.title, { yPercent: 100, rotateY: 20, scale: 0.2 })
+            gsap.set(menu.media, { clipPath: clipPath.bottom })
+
+            animateInnerMenu()
+        }
+
+        const animateMenu = () => {
+            if (!isEnabled) {
+                gsap.to(menu.element, {
+                    duration: 1.2,
+                    pointerEvents: 'auto',
+                    clipPath: clipPath.init,
+                    ease: 'expo.inOut',
+                })
+            } else {
+                gsap.to(menu.element, {
+                    duration: 0.8,
+                    clipPath: clipPath.top,
+                    ease: 'expo.inOut',
+                    onComplete: () => {
+                        gsap.set(menu.element, { pointerEvents: 'none', clipPath: clipPath.bottom })
+                    }
+                })
+            }
+        }
+
+        const animateInnerMenu = () => {
+            tlMenu.to(
+                menu.pages,
+                {
+                    yPercent: 0,
+                    autoAlpha: 1,
+                    stagger: 0.032,
+                },
+                0.24
+            ).to(
+                menu.info,
+                {
+                    yPercent: 0,
+                    autoAlpha: 1,
+                    stagger: 0.032,
+                },
+                0.24
+            ).to(
+                menu.title,
+                {
+                    yPercent: 0,
+                    rotateY: 0,
+                    scale: 1,
+                    stagger: 0.032,
+                },
+                0
+            ).to(
+                menu.media,
+                {
+                    clipPath: clipPath.init,
+                },
+                0
+            )
+        }
+
+        const animateButton = (text) => {
+            gsap.timeline()
+                .to(button.element, {
+                    duration: 0.8,
+                    autoAlpha: 0,
+                    pointerEvents: 'none',
+                    ease: 'expo.inOut',
+                    onComplete: () => {
+                        button.text[0].textContent = text
+                    }
+                })
+                .to(button.element, {
+                    duration: 0.8,
+                    autoAlpha: 1,
+                    pointerEvents: 'auto',
+                })
+        }
+
+        const addEventListenerss = () => {
+            button.open.addEventListener('click', () => {
+                if (!isEnabled) {
+                    animateMenu()
+                    animateButton('Close')
+                    tlMenu.play()
+                } else {
+                    animateButton('Menu')
+                    animateMenu()
+                    tlMenu.reverse(2)
+                }
+
+                isEnabled = !isEnabled
+            })
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            initMenu()
+            addEventListenerss()
+        })
+
     </script>
 
     <script>
