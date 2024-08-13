@@ -13,9 +13,27 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/about.css">
+    <link rel="stylesheet" href="./assets/css/preloader.css">
 </head>
 
 <body>
+
+    <div class="preloader">
+        <div class="random">
+             <span class="nbr ltr">0</span>
+             <span class="nbr ltr">0</span>
+             <span class="nbr ltr">0</span>
+             <span class="nbr ltr">0</span>
+             <span class="nbr ltr">0</span>
+             <span class="nbr ltr">0</span>
+             <span class="nbr ltr">0</span>
+             <span class="nbr ltr">0</span>
+        </div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill"></div>
+        </div>
+   </div>
+
     <main class="app">
     <!-- Nav -->
 
@@ -350,6 +368,7 @@
     </main>
 
     <script type="module" src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/preloader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
