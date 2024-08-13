@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Loading";
+    src: url(/fonts/BrooklynTrial-Book-BF667252b00490a.otf);
+}
+
 .preloader {
     margin: 0;
     padding: 0;
@@ -12,6 +17,7 @@
     z-index: 999;
     transition: opacity 2.5s ease;
     opacity: 1;
+    font-family: "Loading";
 }
 
 .preloader.fade-out {
