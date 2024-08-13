@@ -732,6 +732,10 @@ img.tab_col_image {
         display: none;
     }
 
+    .nav_menu_button{
+        margin-top: 3rem;
+    }
+
     .section {
         height: 100%;
     }
