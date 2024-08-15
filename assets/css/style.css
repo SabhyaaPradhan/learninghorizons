@@ -13,7 +13,7 @@
 :root {
     --primary: #e6e9f0;
     --secondary: #191919;
-    --alternate: #E5E3DB;
+    --alternate: rgb(220, 215, 205);
 
     --border: 1px solid #21212157;
     --ease: cubic-bezier(0.255, 0.655, 0.02, 0.995);
@@ -98,7 +98,7 @@ svg.trail {
 svg.trail path {
     fill: none;
 
-    stroke: #ffffff;
+    stroke: #979797;
     stroke-width: 8px;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -141,6 +141,12 @@ svg.trail path {
    height: 1.6rem;
    border-radius: 20rem;
    background-color: greenyellow;
+   animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0%, 100% {background-color:#3A5743;}
+    50% {background-color: #ADE25D;}
 }
 
 /* Menu */
@@ -846,7 +852,7 @@ img.tab_col_image {
         height: 20rem;
         z-index: -1;
         opacity: 1;
-        flex: 0.75;
+        margin-right: 3rem;
     }
 
     .tab_col_title {

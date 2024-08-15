@@ -72,7 +72,7 @@ svg.trail {
 svg.trail path {
     fill: none;
 
-    stroke: #ffffff;
+    stroke: #979797;
     stroke-width: 8px;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -144,6 +144,12 @@ html.lenis {
     height: 1.6rem;
     border-radius: 20rem;
     background-color: greenyellow;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0%, 100% {background-color:#3A5743;}
+    50% {background-color: #ADE25D;}
 }
 
 /* Menu */
