@@ -599,11 +599,11 @@ html.lenis {
         overflow-x: hidden;
     }
 
-    svg.trail path {
+    svg#trailer path {
         display: none;
     }
 
-    .trail{
+    #trailer{
         display: none;
     }
 

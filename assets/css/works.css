@@ -484,11 +484,11 @@ img.gallery_row_media_image {
         overflow-x: hidden;
     }
 
-    svg.trail path {
+    svg#trailer path {
         display: none;
     }
 
-    .trail {
+    #trailer {
         display: none;
     }
 
